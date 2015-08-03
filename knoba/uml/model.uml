@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_toRhEDQ4EeW1JopXi-URKQ" name="NewModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="__Ws8YDjzEeWgLLgVPc11VQ" name="com.scheran.knoba">
+    <packagedElement xmi:type="uml:Class" xmi:id="_xssRgDeVEeWgLLgVPc11VQ" name="User">
+      <ownedAttribute xmi:id="_iQy9MDjzEeWgLLgVPc11VQ" name="id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQy9MTjzEeWgLLgVPc11VQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQzkQDjzEeWgLLgVPc11VQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QRhewDj0EeWgLLgVPc11VQ" name="Company">
+      <ownedAttribute xmi:id="_UeQk8Dj0EeWgLLgVPc11VQ" name="id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_2jDgADj0EeWgLLgVPc11VQ" memberEnd="_2jEHEDj0EeWgLLgVPc11VQ _2jQUUjj0EeWgLLgVPc11VQ" navigableOwnedEnd="_2jQUUjj0EeWgLLgVPc11VQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_2jEHEDj0EeWgLLgVPc11VQ" name="users" type="_xssRgDeVEeWgLLgVPc11VQ" association="_2jDgADj0EeWgLLgVPc11VQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2jQUUDj0EeWgLLgVPc11VQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2jQUUTj0EeWgLLgVPc11VQ" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_2jQUUjj0EeWgLLgVPc11VQ" name="companys" type="_QRhewDj0EeWgLLgVPc11VQ" association="_2jDgADj0EeWgLLgVPc11VQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2jeWwDj0EeWgLLgVPc11VQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2jeWwTj0EeWgLLgVPc11VQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

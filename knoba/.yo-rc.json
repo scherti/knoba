@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "knoba",
+    "packageName": "com.scheran.knoba",
+    "packageFolder": "com/scheran/knoba",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "enableTranslation": true,
+    "rememberMeKey": "a32917d522cf4e7294730a50a8caa3e1a0d470a3"
+  }
+}
