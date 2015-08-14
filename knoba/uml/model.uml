@@ -7,10 +7,18 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQy9MTjzEeWgLLgVPc11VQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQzkQDjzEeWgLLgVPc11VQ" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:id="_UPHRgEK_EeWsWqt82nFt1g" name="firstName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yaqr8EK_EeWsWqt82nFt1g" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aH0KQEK_EeWsWqt82nFt1g" value="1"/>
+      </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_QRhewDj0EeWgLLgVPc11VQ" name="Company">
+    <packagedElement xmi:type="uml:Class" xmi:id="_QRhewDj0EeWgLLgVPc11VQ" name="Topic">
       <ownedAttribute xmi:id="_UeQk8Dj0EeWgLLgVPc11VQ" name="id">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="__HxEUEK-EeWsWqt82nFt1g" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_2jDgADj0EeWgLLgVPc11VQ" memberEnd="_2jEHEDj0EeWgLLgVPc11VQ _2jQUUjj0EeWgLLgVPc11VQ" navigableOwnedEnd="_2jQUUjj0EeWgLLgVPc11VQ">
@@ -19,9 +27,9 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2jQUUDj0EeWgLLgVPc11VQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2jQUUTj0EeWgLLgVPc11VQ" value="*"/>
       </ownedEnd>
-      <ownedEnd xmi:id="_2jQUUjj0EeWgLLgVPc11VQ" name="companys" type="_QRhewDj0EeWgLLgVPc11VQ" association="_2jDgADj0EeWgLLgVPc11VQ">
+      <ownedEnd xmi:id="_2jQUUjj0EeWgLLgVPc11VQ" name="topics" type="_QRhewDj0EeWgLLgVPc11VQ" association="_2jDgADj0EeWgLLgVPc11VQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2jeWwDj0EeWgLLgVPc11VQ"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2jeWwTj0EeWgLLgVPc11VQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2jeWwTj0EeWgLLgVPc11VQ" value="*"/>
       </ownedEnd>
     </packagedElement>
   </packagedElement>
