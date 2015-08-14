@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_toRhEDQ4EeW1JopXi-URKQ" name="NewModel">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_toRhEDQ4EeW1JopXi-URKQ" name="NewModel">
   <packagedElement xmi:type="uml:Package" xmi:id="__Ws8YDjzEeWgLLgVPc11VQ" name="com.scheran.knoba">
+    <packageImport xmi:id="_reEf4ELJEeWsWqt82nFt1g">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
     <packagedElement xmi:type="uml:Class" xmi:id="_xssRgDeVEeWgLLgVPc11VQ" name="User">
       <ownedAttribute xmi:id="_iQy9MDjzEeWgLLgVPc11VQ" name="id">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
@@ -21,15 +24,14 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_2jDgADj0EeWgLLgVPc11VQ" memberEnd="_2jEHEDj0EeWgLLgVPc11VQ _2jQUUjj0EeWgLLgVPc11VQ" navigableOwnedEnd="_2jQUUjj0EeWgLLgVPc11VQ">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:id="_2jEHEDj0EeWgLLgVPc11VQ" name="users" type="_xssRgDeVEeWgLLgVPc11VQ" association="_2jDgADj0EeWgLLgVPc11VQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2jQUUDj0EeWgLLgVPc11VQ"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2jQUUTj0EeWgLLgVPc11VQ" value="*"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5Hp7AELJEeWsWqt82nFt1g" name="A_users_topics" memberEnd="_5HqiEELJEeWsWqt82nFt1g _5H9dAULJEeWsWqt82nFt1g" navigableOwnedEnd="_5H9dAULJEeWsWqt82nFt1g">
+      <ownedEnd xmi:id="_5HqiEELJEeWsWqt82nFt1g" name="users" type="_xssRgDeVEeWgLLgVPc11VQ" aggregation="composite" association="_5Hp7AELJEeWsWqt82nFt1g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5H818ELJEeWsWqt82nFt1g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5H9dAELJEeWsWqt82nFt1g" value="*"/>
       </ownedEnd>
-      <ownedEnd xmi:id="_2jQUUjj0EeWgLLgVPc11VQ" name="topics" type="_QRhewDj0EeWgLLgVPc11VQ" association="_2jDgADj0EeWgLLgVPc11VQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2jeWwDj0EeWgLLgVPc11VQ"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2jeWwTj0EeWgLLgVPc11VQ" value="*"/>
+      <ownedEnd xmi:id="_5H9dAULJEeWsWqt82nFt1g" name="topics" type="_QRhewDj0EeWgLLgVPc11VQ" association="_5Hp7AELJEeWsWqt82nFt1g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5IRmEELJEeWsWqt82nFt1g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5ISNIELJEeWsWqt82nFt1g" value="*"/>
       </ownedEnd>
     </packagedElement>
   </packagedElement>
