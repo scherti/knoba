@@ -54,6 +54,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5ISNIELJEeWsWqt82nFt1g" value="*"/>
       </ownedEnd>
     </packagedElement>
+<<<<<<< HEAD
     <packagedElement xmi:type="uml:Class" xmi:id="_K6necEQLEeWX6vo14GQrVw" name="Company">
       <ownedAttribute xmi:id="_NjWbQEQLEeWX6vo14GQrVw" name="name">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -146,6 +147,12 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BaGwgEQWEeWX6vo14GQrVw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BaGwgUQWEeWX6vo14GQrVw" value="1"/>
       </ownedEnd>
+=======
+    <packagedElement xmi:type="uml:Class" xmi:id="_OlFi4EP8EeWGef0X6GtUPg" name="UserService">
+      <ownedOperation xmi:id="_QZzBwEP8EeWGef0X6GtUPg" name="createUser">
+        <ownedParameter xmi:id="_SY3WgEP8EeWGef0X6GtUPg" name="user" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+      </ownedOperation>
+>>>>>>> branch 'master' of https://github.com/scherti/knoba.git
     </packagedElement>
   </packagedElement>
 </uml:Model>
