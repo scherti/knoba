@@ -18,6 +18,7 @@
 # Eclipse
 ######################
 *.pydevproject
+.project
 .metadata
 /bin/**
 /tmp/**
@@ -27,6 +28,8 @@
 *.swp
 *~.nib
 local.properties
+.classpath
+.settings/**
 .loadpath
 /src/main/resources/rebel.xml
 
