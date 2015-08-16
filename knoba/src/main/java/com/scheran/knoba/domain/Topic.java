@@ -18,7 +18,9 @@ public class Topic implements Serializable {
     @Id
     private String id;
 
-    @NotNull
+    @NotNull    
+
+    
     @Field("name")
     private String name;
 

@@ -3,24 +3,21 @@ package com.scheran.knoba.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import com.scheran.knoba.domain.Topic;
 import com.scheran.knoba.repository.TopicRepository;
-import com.scheran.knoba.web.rest.dto.TopicDTO;
-import com.scheran.knoba.web.rest.mapper.TopicMapper;
+import com.scheran.knoba.web.rest.util.HeaderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * REST controller for managing Topic.
@@ -34,9 +31,6 @@ public class TopicResource {
     @Inject
     private TopicRepository topicRepository;
 
-    @Inject
-    private TopicMapper topicMapper;
-
     /**
      * POST  /topics -> Create a new topic.
      */
@@ -44,14 +38,15 @@ public class TopicResource {
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public ResponseEntity<TopicDTO> create(@Valid @RequestBody TopicDTO topicDTO) throws URISyntaxException {
-        log.debug("REST request to save Topic : {}", topicDTO);
-        if (topicDTO.getId() != null) {
+    public ResponseEntity<Topic> create(@Valid @RequestBody Topic topic) throws URISyntaxException {
+        log.debug("REST request to save Topic : {}", topic);
+        if (topic.getId() != null) {
             return ResponseEntity.badRequest().header("Failure", "A new topic cannot already have an ID").body(null);
         }
-        Topic topic = topicMapper.topicDTOToTopic(topicDTO);
         Topic result = topicRepository.save(topic);
-        return ResponseEntity.created(new URI("/api/topics/" + topicDTO.getId())).body(topicMapper.topicToTopicDTO(result));
+        return ResponseEntity.created(new URI("/api/topics/" + result.getId()))
+                .headers(HeaderUtil.createEntityCreationAlert("topic", result.getId().toString()))
+                .body(result);
     }
 
     /**
@@ -61,14 +56,15 @@ public class TopicResource {
         method = RequestMethod.PUT,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public ResponseEntity<TopicDTO> update(@Valid @RequestBody TopicDTO topicDTO) throws URISyntaxException {
-        log.debug("REST request to update Topic : {}", topicDTO);
-        if (topicDTO.getId() == null) {
-            return create(topicDTO);
+    public ResponseEntity<Topic> update(@Valid @RequestBody Topic topic) throws URISyntaxException {
+        log.debug("REST request to update Topic : {}", topic);
+        if (topic.getId() == null) {
+            return create(topic);
         }
-        Topic topic = topicMapper.topicDTOToTopic(topicDTO);
         Topic result = topicRepository.save(topic);
-        return ResponseEntity.ok().body(topicMapper.topicToTopicDTO(result));
+        return ResponseEntity.ok()
+                .headers(HeaderUtil.createEntityUpdateAlert("topic", topic.getId().toString()))
+                .body(result);
     }
 
     /**
@@ -78,12 +74,9 @@ public class TopicResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    @Transactional(readOnly = true)
-    public List<TopicDTO> getAll() {
+    public List<Topic> getAll() {
         log.debug("REST request to get all Topics");
-        return topicRepository.findAll().stream()
-            .map(topic -> topicMapper.topicToTopicDTO(topic))
-            .collect(Collectors.toCollection(LinkedList::new));
+        return topicRepository.findAll();
     }
 
     /**
@@ -93,12 +86,11 @@ public class TopicResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public ResponseEntity<TopicDTO> get(@PathVariable String id) {
+    public ResponseEntity<Topic> get(@PathVariable String id) {
         log.debug("REST request to get Topic : {}", id);
         return Optional.ofNullable(topicRepository.findOne(id))
-            .map(topicMapper::topicToTopicDTO)
-            .map(topicDTO -> new ResponseEntity<>(
-                topicDTO,
+            .map(topic -> new ResponseEntity<>(
+                topic,
                 HttpStatus.OK))
             .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
@@ -110,8 +102,9 @@ public class TopicResource {
             method = RequestMethod.DELETE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public void delete(@PathVariable String id) {
+    public ResponseEntity<Void> delete(@PathVariable String id) {
         log.debug("REST request to delete Topic : {}", id);
         topicRepository.delete(id);
+        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert("topic", id.toString())).build();
     }
 }

@@ -3,7 +3,6 @@ package com.scheran.knoba.web.rest;
 import com.scheran.knoba.Application;
 import com.scheran.knoba.domain.Topic;
 import com.scheran.knoba.repository.TopicRepository;
-import com.scheran.knoba.web.rest.mapper.TopicMapper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +12,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.http.MediaType;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.util.ReflectionTestUtils;
@@ -46,7 +46,7 @@ public class TopicResourceTest {
     private TopicRepository topicRepository;
 
     @Inject
-    private TopicMapper topicMapper;
+    private MappingJackson2HttpMessageConverter jacksonMessageConverter;
 
     private MockMvc restTopicMockMvc;
 
@@ -57,8 +57,7 @@ public class TopicResourceTest {
         MockitoAnnotations.initMocks(this);
         TopicResource topicResource = new TopicResource();
         ReflectionTestUtils.setField(topicResource, "topicRepository", topicRepository);
-        ReflectionTestUtils.setField(topicResource, "topicMapper", topicMapper);
-        this.restTopicMockMvc = MockMvcBuilders.standaloneSetup(topicResource).build();
+        this.restTopicMockMvc = MockMvcBuilders.standaloneSetup(topicResource).setMessageConverters(jacksonMessageConverter).build();
     }
 
     @Before
@@ -73,6 +72,7 @@ public class TopicResourceTest {
         int databaseSizeBeforeCreate = topicRepository.findAll().size();
 
         // Create the Topic
+
         restTopicMockMvc.perform(post("/api/topics")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(topic)))
@@ -92,6 +92,7 @@ public class TopicResourceTest {
         topic.setName(null);
 
         // Create the Topic, which fails.
+
         restTopicMockMvc.perform(post("/api/topics")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(topic)))
@@ -143,6 +144,8 @@ public class TopicResourceTest {
 
         // Update the topic
         topic.setName(UPDATED_NAME);
+        
+
         restTopicMockMvc.perform(put("/api/topics")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(topic)))

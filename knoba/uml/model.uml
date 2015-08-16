@@ -34,5 +34,10 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5ISNIELJEeWsWqt82nFt1g" value="*"/>
       </ownedEnd>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OlFi4EP8EeWGef0X6GtUPg" name="UserService">
+      <ownedOperation xmi:id="_QZzBwEP8EeWGef0X6GtUPg" name="createUser">
+        <ownedParameter xmi:id="_SY3WgEP8EeWGef0X6GtUPg" name="user" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+      </ownedOperation>
+    </packagedElement>
   </packagedElement>
 </uml:Model>

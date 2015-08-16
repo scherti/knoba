@@ -1,24 +1,23 @@
 
 <div>
     <h2><span translate="knobaApp.topic.detail.title">Topic</span> {{topic.id}}</h2>
-
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
-                <tr>
-                    <th translate="entity.detail.field">Field</th>
-                    <th translate="entity.detail.value">Value</th>
-                </tr>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <span translate="knobaApp.topic.name">Name</span>
-                    </td>
-                    <td>
-                        <input type="text" class="input-sm form-control" value="{{topic.name}}" readonly>
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    <span translate="knobaApp.topic.name">Name</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{topic.name}}" readonly>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

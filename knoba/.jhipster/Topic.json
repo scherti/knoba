@@ -23,7 +23,6 @@
     "fieldsContainBigDecimal": false,
     "fieldsContainDateTime": false,
     "fieldsContainDate": false,
-    "dto": "mapstruct",
     "pagination": "no",
     "validation": true
 }
