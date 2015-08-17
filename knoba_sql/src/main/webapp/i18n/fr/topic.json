@@ -1,0 +1,20 @@
+{
+    "knobaApp": {
+        "topic" : {
+            "home": {
+                "title": "Topics",
+                "createLabel": "Créer un nouveau Topic",
+                "createOrEditLabel": "Créer ou éditer un Topic"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Topic {{ id }} ?"
+            },
+            "detail": {
+                "title": "Topic"
+            },
+            "name": "Name",
+            "user": "user"
+        }
+    }
+}
+

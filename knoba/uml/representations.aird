@@ -12,6 +12,7 @@
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <models xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#_0"/>
+  <models xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#_0"/>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_ttVAMDQ4EeW1JopXi-URKQ" initialized="true">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']"/>
   </ownedViews>
@@ -147,18 +148,6 @@
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_m46bsUQTEeWX6vo14GQrVw" fontName=".Helvetica Neue DeskInterface" bold="true"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m46bskQTEeWX6vo14GQrVw" x="95" y="485" width="120" height="100"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_Oo_LcEP8EeWGef0X6GtUPg" type="3009" element="_OlKbYEP8EeWGef0X6GtUPg">
-                <children xmi:type="notation:Node" xmi:id="_OpIVYEP8EeWGef0X6GtUPg" type="5004"/>
-                <children xmi:type="notation:Node" xmi:id="_OpI8cEP8EeWGef0X6GtUPg" type="7003">
-                  <children xmi:type="notation:Node" xmi:id="_T1XJsEP8EeWGef0X6GtUPg" type="3010" element="_T0KP0EP8EeWGef0X6GtUPg">
-                    <layoutConstraint xmi:type="notation:Location" xmi:id="_T1XJsUP8EeWGef0X6GtUPg"/>
-                  </children>
-                  <styles xmi:type="notation:SortingStyle" xmi:id="_OpI8cUP8EeWGef0X6GtUPg"/>
-                  <styles xmi:type="notation:FilteringStyle" xmi:id="_OpI8ckP8EeWGef0X6GtUPg"/>
-                </children>
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_Oo_LcUP8EeWGef0X6GtUPg" fontName=".Helvetica Neue DeskInterface" bold="true"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Oo_LckP8EeWGef0X6GtUPg" x="255" y="386" width="120" height="100"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="__Y6i4TjzEeWgLLgVPc11VQ"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="__Y6i4jjzEeWgLLgVPc11VQ"/>
