@@ -210,6 +210,7 @@
                   <styles xmi:type="notation:FilteringStyle" xmi:id="_m47p0kQTEeWX6vo14GQrVw"/>
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_m46bsUQTEeWX6vo14GQrVw" fontName=".Helvetica Neue DeskInterface" bold="true"/>
+<<<<<<< HEAD
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m46bskQTEeWX6vo14GQrVw" x="814" y="684" width="150"/>
               </children>
               <children xmi:type="notation:Node" xmi:id="_W40tIEQcEeWLD4OYDBAvsg" type="3009" element="_W0Q9QEQcEeWLD4OYDBAvsg">
@@ -1057,6 +1058,9 @@
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_XjeTEVR3EeWMZfCUvt8W4A" fontName=".Helvetica Neue DeskInterface" bold="true"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XjeTElR3EeWMZfCUvt8W4A" x="2236" y="87" width="140" height="90"/>
+=======
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m46bskQTEeWX6vo14GQrVw" x="95" y="485" width="120" height="100"/>
+>>>>>>> branch 'master' of https://github.com/scherti/knoba.git
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="__Y6i4TjzEeWgLLgVPc11VQ"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="__Y6i4jjzEeWgLLgVPc11VQ"/>
