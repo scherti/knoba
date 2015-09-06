@@ -54,9 +54,6 @@
       <ownedAttribute xmi:id="_mB2sUEQdEeWLD4OYDBAvsg" name="lastLoginDate">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#DateTime"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_eKFWcEQrEeWLD4OYDBAvsg" name="isCustomer">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
       <ownedAttribute xmi:id="_kKhO4EQrEeWLD4OYDBAvsg" name="isActive">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ar8scEgtEeWZ1OWGKZfmtA" value="1"/>
@@ -78,6 +75,9 @@
       </ownedAttribute>
       <ownedAttribute xmi:id="_pTdCIEQsEeWLD4OYDBAvsg" name="Industry" type="_TCBAYEQsEeWLD4OYDBAvsg"/>
       <ownedAttribute xmi:id="_CGP-oEQzEeWZp8ZqpUijFw" name="userStatus" type="_5ZPyQEQyEeWZp8ZqpUijFw"/>
+      <ownedAttribute xmi:id="_CrW5MFMNEeW61Y5ljw4pSw" name="newUserStatusHasBeenInformed">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
       <ownedAttribute xmi:id="_Lx-BwEROEeWZp8ZqpUijFw" name="currentAdvertisement" type="_dQ0xMERBEeWZp8ZqpUijFw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TXzxwEROEeWZp8ZqpUijFw" value="1"/>
       </ownedAttribute>
@@ -87,23 +87,29 @@
       <ownedAttribute xmi:id="_PF-eQERQEeWZp8ZqpUijFw" name="isCustomer">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_jbKOsERQEeWZp8ZqpUijFw" name="customerOfficialName">
+      <ownedAttribute xmi:id="_jbKOsERQEeWZp8ZqpUijFw" name="customerOfficialCompanyName">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lXyTcERQEeWZp8ZqpUijFw"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_UzwgcERQEeWZp8ZqpUijFw" name="customerOfficialAddress">
+      <ownedAttribute xmi:id="_UzwgcERQEeWZp8ZqpUijFw" name="customerOfficialCompanyAddress">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_cGuXwERQEeWZp8ZqpUijFw" name="customerVATnumber">
+      <ownedAttribute xmi:id="_cGuXwERQEeWZp8ZqpUijFw" name="advertiserVATnumber">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_6Cz0gEfTEeWjwadppjTCgQ" name="HasBeenACustomer">
+      <ownedAttribute xmi:id="_6Cz0gEfTEeWjwadppjTCgQ" name="hasBeenACustomer">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_3prkgEfUEeWjwadppjTCgQ" name="customerNumber">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qx7ocEgvEeWUINYiJTnwrw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_REc70EgvEeWUINYiJTnwrw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_es5asFL0EeWBBp_QVMjpMQ" name="isAdvertiser">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_kwc4kFL0EeWBBp_QVMjpMQ" name="hasBeenAdvertiser">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_b73MUEdVEeWkPtfE64Fcmg" name="User[]"/>
@@ -140,13 +146,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_qv99AEdZEeWkPtfE64Fcmg" name="ResourceType">
+    <packagedElement xmi:type="uml:Class" xmi:id="_qv99AEdZEeWkPtfE64Fcmg" name="ResourceHeading">
       <ownedAttribute xmi:id="_zoGbUEdZEeWkPtfE64Fcmg" name="name">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_tvdqkEg2EeWUINYiJTnwrw" name="isGlobalResource">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xYtCIEg2EeWUINYiJTnwrw" value="1"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_QRhewDj0EeWgLLgVPc11VQ" name="Topic">
@@ -177,6 +179,9 @@
       <ownedAttribute xmi:id="_Y9BIwEQ4EeWZp8ZqpUijFw" name="industry" type="_TCBAYEQsEeWLD4OYDBAvsg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h6kSkEQ4EeWZp8ZqpUijFw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i4KjQEQ4EeWZp8ZqpUijFw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_tBiaMEnOEeWhp6PJ3L5VUg" name="active">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_u0rAEEQNEeWX6vo14GQrVw" name="CompanyGroup">
@@ -256,6 +261,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_3-9wIEQzEeWZp8ZqpUijFw" name="hasJoined">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uc2WEEnYEeWhp6PJ3L5VUg" name="hasBeenCounted">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
@@ -356,6 +364,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_9239sEQ-EeWZp8ZqpUijFw" name="Report">
+      <ownedAttribute xmi:id="_DiKVMEnUEeWhp6PJ3L5VUg" name="type" type="_29vLUEnTEeWhp6PJ3L5VUg"/>
       <ownedAttribute xmi:id="__sSAIEQ-EeWZp8ZqpUijFw" name="text">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -477,13 +486,21 @@
           <name xsi:nil="true"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_FSNaQEfWEeWjwadppjTCgQ" name="GetResourceTypesInTopic">
+      <ownedOperation xmi:id="_FSNaQEfWEeWjwadppjTCgQ" name="GetResourceHeadingsInTopic">
         <ownedParameter xmi:id="_K3eZoEfWEeWjwadppjTCgQ" name="Topic" type="_QRhewDj0EeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_zzz0QEfWEeWjwadppjTCgQ" name="ResourceTypes" type="_n7rIoEfWEeWjwadppjTCgQ" direction="return"/>
+        <ownedParameter xmi:id="_zzz0QEfWEeWjwadppjTCgQ" name="ResourceHeadings" type="_n7rIoEfWEeWjwadppjTCgQ" direction="return"/>
       </ownedOperation>
-      <ownedOperation xmi:id="_I45-sEfXEeWjwadppjTCgQ" name="GetResourcesInResourceType">
-        <ownedParameter xmi:id="_R41uIEfXEeWjwadppjTCgQ" name="ResourceType" type="_qv99AEdZEeWkPtfE64Fcmg"/>
+      <ownedOperation xmi:id="_I45-sEfXEeWjwadppjTCgQ" name="GetResourcesInResourceHeading">
+        <ownedParameter xmi:id="_R41uIEfXEeWjwadppjTCgQ" name="ResourceHeading" type="_qv99AEdZEeWkPtfE64Fcmg"/>
         <ownedParameter xmi:id="_FGdyYEfYEeWjwadppjTCgQ" name="Resources" type="_6HcgEEfXEeWjwadppjTCgQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_V61nkEnSEeWhp6PJ3L5VUg" name="GetQuestionsInTopic">
+        <ownedParameter xmi:id="_YNCTsEnSEeWhp6PJ3L5VUg" name="Topic" type="_QRhewDj0EeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_joqpgEnSEeWhp6PJ3L5VUg" name="Questions" type="_nRgmIEgqEeWZ1OWGKZfmtA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_pPjZgEnSEeWhp6PJ3L5VUg" name="GetAnswersForQuestion">
+        <ownedParameter xmi:id="_vi94UEnSEeWhp6PJ3L5VUg" name="Question" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_y2WUoEnSEeWhp6PJ3L5VUg" name="Answers" type="_nRgmIEgqEeWZ1OWGKZfmtA" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_7lYOMEdJEeWkPtfE64Fcmg" name="UserServices">
@@ -506,7 +523,13 @@
         </ownedParameter>
         <ownedParameter xmi:id="_YR2u0EdMEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ" direction="return"/>
       </ownedOperation>
-      <ownedOperation xmi:id="_t0slMEdMEeWkPtfE64Fcmg" name="UpdateUser">
+      <ownedOperation xmi:id="_ps-lEEdQEeWkPtfE64Fcmg" name="DeactivateUser">
+        <ownedParameter xmi:id="_rkL-UEdQEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_0r_I8EdTEeWkPtfE64Fcmg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_t0slMEdMEeWkPtfE64Fcmg" name="EditUser">
         <ownedParameter xmi:id="_OY0LsEfREeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_xdBWwEdMEeWkPtfE64Fcmg" name="FirstName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -528,7 +551,7 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_MvKAUEdPEeWkPtfE64Fcmg" name="UpdateToCustomer">
+      <ownedOperation xmi:id="_MvKAUEdPEeWkPtfE64Fcmg" name="ActivateUsersCustomerStatus">
         <ownedParameter xmi:id="_ZdPcgEdPEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_HF6B8EfVEeWjwadppjTCgQ" name="CustomerNumber">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -543,7 +566,13 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_5gpuoEdPEeWkPtfE64Fcmg" name="EditCustomerInformation">
+      <ownedOperation xmi:id="_6KHS4FL2EeWBBp_QVMjpMQ" name="DeactivateUsersCustomerStatus">
+        <ownedParameter xmi:id="__AfL8FL2EeWBBp_QVMjpMQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_BRoIIFL3EeWBBp_QVMjpMQ" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_5gpuoEdPEeWkPtfE64Fcmg" name="EditUsersCustomerInformation">
         <ownedParameter xmi:id="_7xUwwEdPEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_eZ8KkEdQEeWkPtfE64Fcmg" name="CustomerOfficialName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -558,34 +587,72 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_ps-lEEdQEeWkPtfE64Fcmg" name="DeactivateUser">
-        <ownedParameter xmi:id="_rkL-UEdQEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_0r_I8EdTEeWkPtfE64Fcmg" name="Done" direction="return">
+      <ownedOperation xmi:id="_MTRikFL1EeWBBp_QVMjpMQ" name="ActivateUsersAdvertiserStatus">
+        <ownedParameter xmi:id="_OonpUFL1EeWBBp_QVMjpMQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_YPdAsFL1EeWBBp_QVMjpMQ" name="advertiserVATnumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_RS8hkFL1EeWBBp_QVMjpMQ" name="Done" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_EdJB4FL3EeWBBp_QVMjpMQ" name="DeactivateUsersAdvertiserStatus">
+        <ownedParameter xmi:id="_IHa7QFL3EeWBBp_QVMjpMQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_L3WJoFL3EeWBBp_QVMjpMQ" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rj9-UFL1EeWBBp_QVMjpMQ" name="EditUsersAdvertiserInformation">
+        <ownedParameter xmi:id="_uZI0oFL1EeWBBp_QVMjpMQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_w220QFL1EeWBBp_QVMjpMQ" name="AdvertiserVATnumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_1rBG0FL1EeWBBp_QVMjpMQ" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1rGUwEfQEeWjwadppjTCgQ" name="ActivateUsersMainUserStatus">
+        <ownedParameter xmi:id="_5PCVkEfQEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_80R98EfQEeWjwadppjTCgQ" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_BoGSQEfREeWjwadppjTCgQ" name="DeactivateUsersMainUserStatus">
+        <ownedParameter xmi:id="_ECobAEfREeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_HFo5AEfREeWjwadppjTCgQ" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_JpGCAFL6EeWBBp_QVMjpMQ" name="AddMainUserRequest">
+        <ownedParameter xmi:id="_Qp3WEFL6EeWBBp_QVMjpMQ" name="SendingUser" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_UZ88gFL6EeWBBp_QVMjpMQ" name="ReceivingUsers" type="_b73MUEdVEeWkPtfE64Fcmg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZvEQ8FMDEeW61Y5ljw4pSw" name="RemoveMainUserRequest">
+        <ownedParameter xmi:id="_bgPToFMDEeW61Y5ljw4pSw" name="MainUserRequest" type="_0EEk4FL6EeWBBp_QVMjpMQ"/>
+        <ownedParameter xmi:id="_feAJsFMDEeW61Y5ljw4pSw" name="Done">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Bl0ZAFMDEeW61Y5ljw4pSw" name="GetUsersMainUserRequests">
+        <ownedParameter xmi:id="_EQXTsFMDEeW61Y5ljw4pSw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_T75_gFMDEeW61Y5ljw4pSw" name="MainUserRequest" type="_IioaIFMDEeW61Y5ljw4pSw" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:id="_Ka450EdeEeWkPtfE64Fcmg" name="GetTotalNumberOfUsers">
         <ownedParameter xmi:id="_VJM2oEdeEeWkPtfE64Fcmg" name="NumberOfUsers" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_iwjdIEdeEeWkPtfE64Fcmg" name="GetTopicLocatioNumberOfUsers">
+      <ownedOperation xmi:id="_hn4oUFL4EeWBBp_QVMjpMQ" name="GetNumberofUsersInTopic">
+        <ownedParameter xmi:id="_kHznYFL4EeWBBp_QVMjpMQ" name="Topic" type="_QRhewDj0EeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_m2EkcFL4EeWBBp_QVMjpMQ" name="NumberOfUsers" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iwjdIEdeEeWkPtfE64Fcmg" name="GetNumberOfUsersInTopicAndLocationGroup">
         <ownedParameter xmi:id="_0tjOMEdeEeWkPtfE64Fcmg" name="Topic" type="_u9B4wEaoEeWNCedta2mC8Q"/>
         <ownedParameter xmi:id="_3LGOsEdeEeWkPtfE64Fcmg" name="Location" type="_T1JBAEdOEeWkPtfE64Fcmg"/>
         <ownedParameter xmi:id="_7SOcIEdeEeWkPtfE64Fcmg" name="UserNumber" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_1rGUwEfQEeWjwadppjTCgQ" name="SetAsMainUser">
-        <ownedParameter xmi:id="_5PCVkEfQEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_80R98EfQEeWjwadppjTCgQ" name="Done" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_BoGSQEfREeWjwadppjTCgQ" name="RemoveAsMainUser">
-        <ownedParameter xmi:id="_ECobAEfREeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_HFo5AEfREeWjwadppjTCgQ" name="Done" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -614,7 +681,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_mP8LkEdSEeWkPtfE64Fcmg" name="UpdateResource">
+      <ownedOperation xmi:id="_DShJ8EdTEeWkPtfE64Fcmg" name="DeactivateResource">
+        <ownedParameter xmi:id="_HgzvUEdTEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_FE_NIEdTEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_Rg5UMEdTEeWkPtfE64Fcmg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_mP8LkEdSEeWkPtfE64Fcmg" name="EditResource">
         <ownedParameter xmi:id="_e_sT0EfQEeWjwadppjTCgQ" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
         <ownedParameter xmi:id="_n1SYwEdSEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_rwzMEEdSEeWkPtfE64Fcmg" name="Topic" type="_QRhewDj0EeWgLLgVPc11VQ"/>
@@ -638,35 +712,12 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_DShJ8EdTEeWkPtfE64Fcmg" name="DeactivateResource">
-        <ownedParameter xmi:id="_HgzvUEdTEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
-        <ownedParameter xmi:id="_FE_NIEdTEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_Rg5UMEdTEeWkPtfE64Fcmg" name="Done" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_SWa8EEdVEeWkPtfE64Fcmg" name="GetMainUsers">
-        <ownedParameter xmi:id="_WHnVwEdVEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
-        <ownedParameter xmi:id="_uNMOoEdVEeWkPtfE64Fcmg" name="User" type="_b73MUEdVEeWkPtfE64Fcmg" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_NBohUEdYEeWkPtfE64Fcmg" name="GetResourcePlusRating">
-        <ownedParameter xmi:id="_aQK_MEdYEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
-        <ownedParameter xmi:id="_ezR-AEdYEeWkPtfE64Fcmg" name="PlusRating" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_lZdn0EdYEeWkPtfE64Fcmg" name="GetResourceMinusRating">
-        <ownedParameter xmi:id="_ne1Y4EdYEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
-        <ownedParameter xmi:id="_rcHt0EdYEeWkPtfE64Fcmg" name="ResourceMinusRating" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
       <ownedOperation xmi:id="_IOuWgEdZEeWkPtfE64Fcmg" name="GetUserResourceRatingStatus">
-        <ownedParameter xmi:id="_Kv6g4EdZEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_NerNMEdZEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_Kv6g4EdZEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_QLicEEdZEeWkPtfE64Fcmg" name="ResourceRatingStatus" type="_BftywEdXEeWkPtfE64Fcmg" direction="return"/>
       </ownedOperation>
-      <ownedOperation xmi:id="_OQ10gEdaEeWkPtfE64Fcmg" name="UpdateUserRatingStatus">
+      <ownedOperation xmi:id="_OQ10gEdaEeWkPtfE64Fcmg" name="EditUserResourceRatingStatus">
         <ownedParameter xmi:id="_Q3npgEdaEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_TVL4IEdaEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
         <ownedParameter xmi:id="_Zf8xQEdaEeWkPtfE64Fcmg" name="PlusRating">
@@ -679,27 +730,30 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_Npz7MEfSEeWjwadppjTCgQ" name="RegisterResourceClick">
-        <ownedParameter xmi:id="_Qh1RMEfSEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+      <ownedOperation xmi:id="_NBohUEdYEeWkPtfE64Fcmg" name="GetResourceTotalPlusRating">
+        <ownedParameter xmi:id="_aQK_MEdYEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_ezR-AEdYEeWkPtfE64Fcmg" name="PlusRating" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lZdn0EdYEeWkPtfE64Fcmg" name="GetResourceTotalMinusRating">
+        <ownedParameter xmi:id="_ne1Y4EdYEeWkPtfE64Fcmg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_rcHt0EdYEeWkPtfE64Fcmg" name="ResourceMinusRating" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ydOvoFMKEeW61Y5ljw4pSw" name="EditUserResourceRatingStatus">
+        <ownedParameter xmi:id="_1I-kMFMKEeW61Y5ljw4pSw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_3genEFMKEeW61Y5ljw4pSw" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_5-_Q4FMKEeW61Y5ljw4pSw" name="RatingStatus" type="_tpFnwEnhEeWhp6PJ3L5VUg"/>
+        <ownedParameter xmi:id="_-4O3wFMKEeW61Y5ljw4pSw" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Npz7MEfSEeWjwadppjTCgQ" name="AddResourceClickHistory">
         <ownedParameter xmi:id="_TL_xYEfSEeWjwadppjTCgQ" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_Qh1RMEfSEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_W29nQEfSEeWjwadppjTCgQ" name="Done" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_OrF2wEg6EeWUINYiJTnwrw" name="AddResourceType">
-        <ownedParameter xmi:id="_RTrpoEg6EeWUINYiJTnwrw" name="name">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_T6MY4Eg6EeWUINYiJTnwrw" name="IsGlobalResource">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-        <ownedParameter xmi:id="_XemTwEg6EeWUINYiJTnwrw" name="Done" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_kgeOoEg6EeWUINYiJTnwrw" name="RemoveResourceType">
-        <ownedParameter xmi:id="_l0TOAEg6EeWUINYiJTnwrw" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
-        <ownedParameter xmi:id="_pnOtEEg6EeWUINYiJTnwrw" name="Done" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
@@ -715,12 +769,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_BftywEdXEeWkPtfE64Fcmg" name="ResourceRatingStatus">
-      <ownedAttribute xmi:id="_CkplEEdYEeWkPtfE64Fcmg" name="Positive">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_FKSxoEdYEeWkPtfE64Fcmg" name="Negative">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
+      <ownedAttribute xmi:id="_VfsJYEniEeWT5cjXtzfQuw" name="RatingStatus" type="_tpFnwEnhEeWhp6PJ3L5VUg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_IotOsEdXEeWkPtfE64Fcmg" name="resourcesToResourceRatingStatuss" memberEnd="_Iot1wEdXEeWkPtfE64Fcmg _Iovq8EdXEeWkPtfE64Fcmg" navigableOwnedEnd="_Iovq8EdXEeWkPtfE64Fcmg">
       <ownedEnd xmi:id="_Iot1wEdXEeWkPtfE64Fcmg" name="resources" type="_zh1ZUEQ6EeWZp8ZqpUijFw" aggregation="shared" association="_IotOsEdXEeWkPtfE64Fcmg">
@@ -763,20 +812,6 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_wRLGUEdaEeWkPtfE64Fcmg" name="AdvertisementServices">
-      <ownedOperation xmi:id="_0kCFYEfYEeWjwadppjTCgQ" name="CheckIfUsersCurrentAdvertisementIsValid">
-        <ownedParameter xmi:id="__UR74EfYEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_CDDPQEfZEeWjwadppjTCgQ" name="CurrentAdvertisementIsValid" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:id="_fI9OcEfZEeWjwadppjTCgQ" name="GetUsersCurrentAdvertisement">
-        <ownedParameter xmi:id="_hOL1kEfZEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_j0-4sEfZEeWjwadppjTCgQ" name="Advertisement" type="_wRLGUEdaEeWkPtfE64Fcmg" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:id="_2N48YEdaEeWkPtfE64Fcmg" name="GetAndSetUsersNewAdvertisement">
-        <ownedParameter xmi:id="_5McYMEdaEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
-        <ownedParameter xmi:id="_9lpXoEdbEeWkPtfE64Fcmg" name="Advertisement" type="_wRLGUEdaEeWkPtfE64Fcmg" direction="return"/>
-      </ownedOperation>
       <ownedOperation xmi:id="_PBmtoEdbEeWkPtfE64Fcmg" name="AddAdvertisement">
         <ownedParameter xmi:id="_q9ygsEfUEeWjwadppjTCgQ" name="AdvertisementNumber">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -809,7 +844,13 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_xl39gEdcEeWkPtfE64Fcmg" name="UpdateAdvertisement">
+      <ownedOperation xmi:id="_Pv5hkEdcEeWkPtfE64Fcmg" name="DeactivateAdvertisement">
+        <ownedParameter xmi:id="_W50xoEdcEeWkPtfE64Fcmg" name="Advertisement" type="_wRLGUEdaEeWkPtfE64Fcmg"/>
+        <ownedParameter xmi:id="_aCZFEEdcEeWkPtfE64Fcmg" name="Done">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_xl39gEdcEeWkPtfE64Fcmg" name="EditAdvertisement">
         <ownedParameter xmi:id="_0HRjQEdcEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
         <ownedParameter xmi:id="_2ZxU4EddEeWkPtfE64Fcmg" name="Location" type="_T1JBAEdOEeWkPtfE64Fcmg"/>
         <ownedParameter xmi:id="_38xOIEdcEeWkPtfE64Fcmg" name="TopBannerPicFile">
@@ -835,9 +876,31 @@
         </ownedParameter>
         <ownedParameter xmi:id="_EclIUEdeEeWkPtfE64Fcmg" name="Topic" type="_u9B4wEaoEeWNCedta2mC8Q"/>
       </ownedOperation>
-      <ownedOperation xmi:id="_Pv5hkEdcEeWkPtfE64Fcmg" name="DeactivateAdvertisement">
-        <ownedParameter xmi:id="_W50xoEdcEeWkPtfE64Fcmg" name="Advertisement" type="_wRLGUEdaEeWkPtfE64Fcmg"/>
-        <ownedParameter xmi:id="_aCZFEEdcEeWkPtfE64Fcmg" name="Done">
+      <ownedOperation xmi:id="_0kCFYEfYEeWjwadppjTCgQ" name="CheckIfUsersCurrentAdvertisementIsValid">
+        <ownedParameter xmi:id="__UR74EfYEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_CDDPQEfZEeWjwadppjTCgQ" name="CurrentAdvertisementIsValid" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_fI9OcEfZEeWjwadppjTCgQ" name="GetUsersCurrentAdvertisement">
+        <ownedParameter xmi:id="_hOL1kEfZEeWjwadppjTCgQ" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_j0-4sEfZEeWjwadppjTCgQ" name="Advertisement" type="_wRLGUEdaEeWkPtfE64Fcmg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_2N48YEdaEeWkPtfE64Fcmg" name="SetAndGetUsersNewAdvertisement">
+        <ownedParameter xmi:id="_5McYMEdaEeWkPtfE64Fcmg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_9lpXoEdbEeWkPtfE64Fcmg" name="Advertisement" type="_wRLGUEdaEeWkPtfE64Fcmg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lcUQEEngEeWhp6PJ3L5VUg" name="AddAdvertisementClickHistory">
+        <ownedParameter xmi:id="_zHUAcEngEeWhp6PJ3L5VUg" name="Advertisement" type="_dQ0xMERBEeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_jxaGUFMIEeW61Y5ljw4pSw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_4BVqcEngEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Kr5sIEnhEeWhp6PJ3L5VUg" name="AddAdvertisementViewHistory">
+        <ownedParameter xmi:id="_NnO00EnhEeWhp6PJ3L5VUg" name="Advertisement" type="_dQ0xMERBEeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_nt6YIFMIEeW61Y5ljw4pSw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_SmmR0EnhEeWhp6PJ3L5VUg" name="Done" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
@@ -867,7 +930,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eIYJ8UfTEeWjwadppjTCgQ" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_n7rIoEfWEeWjwadppjTCgQ" name="ResourceType[]"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_n7rIoEfWEeWjwadppjTCgQ" name="ResourceHeading[]"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_6HcgEEfXEeWjwadppjTCgQ" name="Resource[]"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_iKScAEfaEeWjwadppjTCgQ" name="improvementsToUsers" memberEnd="_iKTDEEfaEeWjwadppjTCgQ _iKURMEfaEeWjwadppjTCgQ" navigableOwnedEnd="_iKURMEfaEeWjwadppjTCgQ">
       <ownedEnd xmi:id="_iKTDEEfaEeWjwadppjTCgQ" name="improvements" type="_D1WuUEQ_EeWZp8ZqpUijFw" aggregation="shared" association="_iKScAEfaEeWjwadppjTCgQ">
@@ -965,12 +1028,7 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_DTFagEgrEeWZ1OWGKZfmtA" name="DiscussionRatingStatus">
-      <ownedAttribute xmi:id="_Fk2BwEgrEeWZ1OWGKZfmtA" name="Positive">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:id="_NzvV0EgrEeWZ1OWGKZfmtA" name="Negative">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedAttribute>
+      <ownedAttribute xmi:id="_MPphYEniEeWT5cjXtzfQuw" name="ratingStatus" type="_tpFnwEnhEeWhp6PJ3L5VUg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_X4LPMEgrEeWZ1OWGKZfmtA" name="discussionsToDiscussionViewHistorys" memberEnd="_X4LPMUgrEeWZ1OWGKZfmtA _X4L2QUgrEeWZ1OWGKZfmtA" navigableOwnedEnd="_X4L2QUgrEeWZ1OWGKZfmtA">
       <ownedEnd xmi:id="_X4LPMUgrEeWZ1OWGKZfmtA" name="discussions" type="_enGMoEfbEeWjwadppjTCgQ" aggregation="shared" association="_X4LPMEgrEeWZ1OWGKZfmtA">
@@ -1022,7 +1080,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QpuPAEgsEeWZ1OWGKZfmtA" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_r9mP4EgsEeWZ1OWGKZfmtA" name="Mainusers" memberEnd="_r9mP4UgsEeWZ1OWGKZfmtA _r9m28kgsEeWZ1OWGKZfmtA" navigableOwnedEnd="_r9m28kgsEeWZ1OWGKZfmtA">
+    <packagedElement xmi:type="uml:Association" xmi:id="_r9mP4EgsEeWZ1OWGKZfmtA" name="mainusers" memberEnd="_r9mP4UgsEeWZ1OWGKZfmtA _r9m28kgsEeWZ1OWGKZfmtA" navigableOwnedEnd="_r9m28kgsEeWZ1OWGKZfmtA">
       <ownedEnd xmi:id="_r9mP4UgsEeWZ1OWGKZfmtA" name="companys" type="_K6necEQLEeWX6vo14GQrVw" aggregation="shared" association="_r9mP4EgsEeWZ1OWGKZfmtA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r9m28EgsEeWZ1OWGKZfmtA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r9m28UgsEeWZ1OWGKZfmtA" value="1"/>
@@ -1080,11 +1138,151 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4XJJAUg4EeWUINYiJTnwrw" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_vg5roEg5EeWUINYiJTnwrw" name="CompanyServices"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_2soSgEg5EeWUINYiJTnwrw" name="PersonalEmailEndingServices"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_7RjPMEg5EeWUINYiJTnwrw" name="DiscussionServices"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Bmdi0Eg6EeWUINYiJTnwrw" name="improvementIdeaServices"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_GZFkUEg6EeWUINYiJTnwrw" name="ReportServices"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vg5roEg5EeWUINYiJTnwrw" name="CompanyServices">
+      <ownedOperation xmi:id="_cuCWgEnOEeWhp6PJ3L5VUg" name="AddCompany">
+        <ownedParameter xmi:id="_eWYNUEnOEeWhp6PJ3L5VUg" name="Name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ioC20EnOEeWhp6PJ3L5VUg" name="PicFile">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_yYWG0EnOEeWhp6PJ3L5VUg" name="Industry" type="_PnwbAFMJEeW61Y5ljw4pSw"/>
+        <ownedParameter xmi:id="_l-9IQEnOEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WJvBoFMGEeW61Y5ljw4pSw" name="DeactivateCompany">
+        <ownedParameter xmi:id="_X3eV0FMGEeW61Y5ljw4pSw" name="Company" type="_K6necEQLEeWX6vo14GQrVw"/>
+        <ownedParameter xmi:id="_aZNSwFMGEeW61Y5ljw4pSw" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_us-t8FMGEeW61Y5ljw4pSw" name="EditCompany">
+        <ownedParameter xmi:id="_wrY7YFMGEeW61Y5ljw4pSw" name="Company" type="_K6necEQLEeWX6vo14GQrVw"/>
+        <ownedParameter xmi:id="_z7dlAFMGEeW61Y5ljw4pSw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_xUjiQFMIEeW61Y5ljw4pSw" name="Name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_0srUoFMIEeW61Y5ljw4pSw" name="PicFile">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_84qeoFMIEeW61Y5ljw4pSw" name="Industry" type="_PnwbAFMJEeW61Y5ljw4pSw"/>
+        <ownedParameter xmi:id="_JbHSkFMJEeW61Y5ljw4pSw" name="Done">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ll_ZMEnPEeWhp6PJ3L5VUg" name="AddCompanyEmailEnding">
+        <ownedParameter xmi:id="_nKSdgEnPEeWhp6PJ3L5VUg" name="CompanyEmailEnding">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_rvlNoEnPEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_7wSRIEnPEeWhp6PJ3L5VUg" name="AddCompanyMainUser">
+        <ownedParameter xmi:id="_cqCVYEnQEeWhp6PJ3L5VUg" name="Company" type="_K6necEQLEeWX6vo14GQrVw"/>
+        <ownedParameter xmi:id="_9GDKMEnPEeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_Ace6gEnQEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Sv8DwEnQEeWhp6PJ3L5VUg" name="RemoveCompanyMainUser">
+        <ownedParameter xmi:id="_hBKtsEnQEeWhp6PJ3L5VUg" name="Company" type="_K6necEQLEeWX6vo14GQrVw"/>
+        <ownedParameter xmi:id="_UPi1UEnQEeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_W2CWcEnQEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_EBMXYEnQEeWhp6PJ3L5VUg" name="GetCompanyMainUsers">
+        <ownedParameter xmi:id="_Fz0yoEnQEeWhp6PJ3L5VUg" name="Company" type="_K6necEQLEeWX6vo14GQrVw"/>
+        <ownedParameter xmi:id="_IQaJ0EnQEeWhp6PJ3L5VUg" name="User" type="_b73MUEdVEeWkPtfE64Fcmg" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7RjPMEg5EeWUINYiJTnwrw" name="DiscussionServices">
+      <ownedOperation xmi:id="_4W76QEnQEeWhp6PJ3L5VUg" name="AddDiscussion">
+        <ownedParameter xmi:id="_GOWWAEnREeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_55NlUEnQEeWhp6PJ3L5VUg" name="DiscussionType" type="_p_zM0Eg0EeWUINYiJTnwrw"/>
+        <ownedParameter xmi:id="_huU5MEnREeWhp6PJ3L5VUg" name="IsChildOf" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_CggLQEnREeWhp6PJ3L5VUg" name="Heading">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_JlGPYEnREeWhp6PJ3L5VUg" name="Text">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Mo5-oEnREeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_rEG80EnREeWhp6PJ3L5VUg" name="DeactivateDiscussion">
+        <ownedParameter xmi:id="_tSrGIEnREeWhp6PJ3L5VUg" name="Discussion" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_wyD-IEnREeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1LCwkEnREeWhp6PJ3L5VUg" name="EditDiscussion">
+        <ownedParameter xmi:id="_3UGHwEnREeWhp6PJ3L5VUg" name="Discussion" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_atfj4FMKEeW61Y5ljw4pSw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_7cSFIEnREeWhp6PJ3L5VUg" name="Header">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_-iTa4EnREeWhp6PJ3L5VUg" name="Text">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Ggc9MEnSEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_qoXMQEniEeWT5cjXtzfQuw" name="GetUsersDiscussionRatingStatus">
+        <ownedParameter xmi:id="_sswF4EniEeWT5cjXtzfQuw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_vM2EEEniEeWT5cjXtzfQuw" name="Discussion" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_y6DVoEniEeWT5cjXtzfQuw" name="DiscussionRatingStatus" type="_DTFagEgrEeWZ1OWGKZfmtA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_avOl0EnhEeWhp6PJ3L5VUg" name="EditUsersDiscussionRatingStatus">
+        <ownedParameter xmi:id="_c6a1kEniEeWT5cjXtzfQuw" name="Discussion" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_hnYT8EniEeWT5cjXtzfQuw" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_kBqlEEniEeWT5cjXtzfQuw" name="RatingStatus" type="_tpFnwEnhEeWhp6PJ3L5VUg"/>
+        <ownedParameter xmi:id="_nZVEcEniEeWT5cjXtzfQuw" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_LExGEFMLEeW61Y5ljw4pSw" name="GetDiscussionTotalPlusRatingStatus">
+        <ownedParameter xmi:id="_NOr_8FMLEeW61Y5ljw4pSw" name="Discussion" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_RyuL0FMLEeW61Y5ljw4pSw" name="PlusRating" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WGaOkFMLEeW61Y5ljw4pSw" name="GetDiscussionTotalMinusRating">
+        <ownedParameter xmi:id="_X7SFgFMLEeW61Y5ljw4pSw" name="Discussion" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_ep7HwFMLEeW61Y5ljw4pSw" name="MinusRating" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Bmdi0Eg6EeWUINYiJTnwrw" name="improvementIdeaServices">
+      <ownedOperation xmi:id="_rDjb0EnUEeWhp6PJ3L5VUg" name="AddImprovementIdea">
+        <ownedParameter xmi:id="_sgGSUEnUEeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_v-qD4EnUEeWhp6PJ3L5VUg" name="Text">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_yKrPgEnUEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GZFkUEg6EeWUINYiJTnwrw" name="ReportServices">
+      <ownedOperation xmi:id="_9J1WoEnSEeWhp6PJ3L5VUg" name="AddReport">
+        <ownedParameter xmi:id="_UsONcEnUEeWhp6PJ3L5VUg" name="ReportType" type="_29vLUEnTEeWhp6PJ3L5VUg"/>
+        <ownedParameter xmi:id="_-htvkEnSEeWhp6PJ3L5VUg" name="Discussion" type="_enGMoEfbEeWjwadppjTCgQ"/>
+        <ownedParameter xmi:id="_aeo4AEnUEeWhp6PJ3L5VUg" name="Resource" type="_zh1ZUEQ6EeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_e-F7UEnTEeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_B5lqUEnTEeWhp6PJ3L5VUg" name="Text">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_EJLHUEnTEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_5ICvkEg6EeWUINYiJTnwrw" name="reportsToDiscussions" memberEnd="_5ICvkUg6EeWUINYiJTnwrw _5ID9sEg6EeWUINYiJTnwrw" navigableOwnedEnd="_5ID9sEg6EeWUINYiJTnwrw">
       <ownedEnd xmi:id="_5ICvkUg6EeWUINYiJTnwrw" name="reports" type="_9239sEQ-EeWZp8ZqpUijFw" aggregation="shared" association="_5ICvkEg6EeWUINYiJTnwrw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5IDWoEg6EeWUINYiJTnwrw"/>
@@ -1095,7 +1293,26 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5IEkwEg6EeWUINYiJTnwrw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_IlTu0Eg7EeWUINYiJTnwrw" name="UserTermsService"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IlTu0Eg7EeWUINYiJTnwrw" name="UserTermsService">
+      <ownedOperation xmi:id="_j8RaoEnVEeWhp6PJ3L5VUg" name="UpdateUsersUserTerms">
+        <ownedParameter xmi:id="_l0EpwEnVEeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_oRzQcEnVEeWhp6PJ3L5VUg" name="UserTerms" type="_m4BD0EQTEeWX6vo14GQrVw"/>
+        <ownedParameter xmi:id="_rv4g4EnVEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_v_YnMEnVEeWhp6PJ3L5VUg" name="CheckIfUserHasNewestUserTerms">
+        <ownedParameter xmi:id="_0eeosEnVEeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_AbRx4EnWEeWhp6PJ3L5VUg" name="UserTermsType" type="_ai7yAEg7EeWUINYiJTnwrw"/>
+        <ownedParameter xmi:id="_3OVhMEnVEeWhp6PJ3L5VUg" name="HasNewestUserTerms" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_MgwV8EnWEeWhp6PJ3L5VUg" name="GetNewstUserTerms">
+        <ownedParameter xmi:id="_OdiLsEnWEeWhp6PJ3L5VUg" name="UserTermsType" type="_ai7yAEg7EeWUINYiJTnwrw"/>
+        <ownedParameter xmi:id="_SkeL4EnWEeWhp6PJ3L5VUg" name="UserTerms" type="_m4BD0EQTEeWX6vo14GQrVw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_ai7yAEg7EeWUINYiJTnwrw" name="UserTermsType">
       <ownedAttribute xmi:id="_cnZkIEg7EeWUINYiJTnwrw" name="GENERAL">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
@@ -1104,6 +1321,163 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_xPS1MEg7EeWUINYiJTnwrw" name="InvitationServices"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xPS1MEg7EeWUINYiJTnwrw" name="InvitationServices">
+      <ownedOperation xmi:id="_TtSjMEnYEeWhp6PJ3L5VUg" name="AddInvitation">
+        <ownedParameter xmi:id="_Vaj9UEnYEeWhp6PJ3L5VUg" name="InvitingUser" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_Xh0kwEnYEeWhp6PJ3L5VUg" name="InvitedColleagueEmail">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_bJpnEEnYEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_1InqgEnYEeWhp6PJ3L5VUg" name="GetAllUncountedInvitations">
+        <ownedParameter xmi:id="_-W4J0EnYEeWhp6PJ3L5VUg" name="Invitations" type="_IAYasEnZEeWhp6PJ3L5VUg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_qdRd8EnfEeWhp6PJ3L5VUg" name="GetUsersWithEnoughInvitations">
+        <ownedParameter xmi:id="_uLDXQEnfEeWhp6PJ3L5VUg" name="Invitations" type="_IAYasEnZEeWhp6PJ3L5VUg"/>
+        <ownedParameter xmi:id="_1HMC8EnfEeWhp6PJ3L5VUg" name="Users" type="_b73MUEdVEeWkPtfE64Fcmg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_-DxjcEnfEeWhp6PJ3L5VUg" name="EditUserStatus">
+        <ownedParameter xmi:id="_DUw78EngEeWhp6PJ3L5VUg" name="User" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_QKfRMEngEeWhp6PJ3L5VUg" name="NewUserStatus" type="_5ZPyQEQyEeWZp8ZqpUijFw"/>
+        <ownedParameter xmi:id="_GqNNwEngEeWhp6PJ3L5VUg" name="Done">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_29vLUEnTEeWhp6PJ3L5VUg" name="ReportType">
+      <ownedAttribute xmi:id="_5H7K8EnTEeWhp6PJ3L5VUg" name="DISCUSSION">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_72XuMEnTEeWhp6PJ3L5VUg" name="RESOURCE">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ej-q0EnWEeWhp6PJ3L5VUg" name="MainUserRequest">
+      <ownedAttribute xmi:id="_hf4bQEnWEeWhp6PJ3L5VUg" name="AddedDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#DateTime"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_7U-xAEnWEeWhp6PJ3L5VUg" name="Pending">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_B3n-oEnXEeWhp6PJ3L5VUg" name="Approved">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_El1RUEnXEeWhp6PJ3L5VUg" name="Declined">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_MFI7gEnXEeWhp6PJ3L5VUg" name="DecissionDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#DateTime"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_oWwMcEnWEeWhp6PJ3L5VUg" name="RequestingUser" memberEnd="_oWwzgEnWEeWhp6PJ3L5VUg _oXGKsEnWEeWhp6PJ3L5VUg" navigableOwnedEnd="_oXGKsEnWEeWhp6PJ3L5VUg">
+      <ownedEnd xmi:id="_oWwzgEnWEeWhp6PJ3L5VUg" name="users" type="_xssRgDeVEeWgLLgVPc11VQ" aggregation="shared" association="_oWwMcEnWEeWhp6PJ3L5VUg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oXFjoEnWEeWhp6PJ3L5VUg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oXFjoUnWEeWhp6PJ3L5VUg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_oXGKsEnWEeWhp6PJ3L5VUg" name="mainUserRequests" type="_ej-q0EnWEeWhp6PJ3L5VUg" association="_oWwMcEnWEeWhp6PJ3L5VUg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oXaTwEnWEeWhp6PJ3L5VUg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oXaTwUnWEeWhp6PJ3L5VUg" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_sTuYUEnWEeWhp6PJ3L5VUg" name="RequestedUser" memberEnd="_sTuYUUnWEeWhp6PJ3L5VUg _sTwNgUnWEeWhp6PJ3L5VUg" navigableOwnedEnd="_sTwNgUnWEeWhp6PJ3L5VUg">
+      <ownedEnd xmi:id="_sTuYUUnWEeWhp6PJ3L5VUg" name="mainUserRequests" type="_ej-q0EnWEeWhp6PJ3L5VUg" aggregation="shared" association="_sTuYUEnWEeWhp6PJ3L5VUg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sTvmcEnWEeWhp6PJ3L5VUg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sTwNgEnWEeWhp6PJ3L5VUg" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_sTwNgUnWEeWhp6PJ3L5VUg" name="users" type="_xssRgDeVEeWgLLgVPc11VQ" association="_sTuYUEnWEeWhp6PJ3L5VUg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sTw0kEnWEeWhp6PJ3L5VUg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sTxboEnWEeWhp6PJ3L5VUg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_cY-WYEnXEeWhp6PJ3L5VUg" name="MainUserRequestServices">
+      <ownedOperation xmi:id="_glkSoEnXEeWhp6PJ3L5VUg" name="AddMainUserRequest">
+        <ownedParameter xmi:id="_iUujIEnXEeWhp6PJ3L5VUg" name="RequestingUser" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_k8kIEEnXEeWhp6PJ3L5VUg" name="RequestedUser" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+        <ownedParameter xmi:id="_pGgY8EnXEeWhp6PJ3L5VUg" name="Done">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_wOMNUEnXEeWhp6PJ3L5VUg" name="GetCompanysMainUsers">
+        <ownedParameter xmi:id="_0A1YgEnXEeWhp6PJ3L5VUg" name="Company" type="_K6necEQLEeWX6vo14GQrVw"/>
+        <ownedParameter xmi:id="_201xMEnXEeWhp6PJ3L5VUg" name="Users" type="_b73MUEdVEeWkPtfE64Fcmg" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_98TjIEnXEeWhp6PJ3L5VUg" name="ApproveMainUserRequest">
+        <ownedParameter xmi:id="_AA54IEnYEeWhp6PJ3L5VUg" name="MainUserRequest" type="_ej-q0EnWEeWhp6PJ3L5VUg"/>
+        <ownedParameter xmi:id="_E6nZEEnYEeWhp6PJ3L5VUg" name="Done" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_H7E5YEnYEeWhp6PJ3L5VUg" name="DeclineMainUserRequest">
+        <ownedParameter xmi:id="_JxRmAEnYEeWhp6PJ3L5VUg" name="MainUserRequest" type="_ej-q0EnWEeWhp6PJ3L5VUg"/>
+        <ownedParameter xmi:id="_N1Rm8EnYEeWhp6PJ3L5VUg" name="Done">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IAYasEnZEeWhp6PJ3L5VUg" name="Invitation[]"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_tpFnwEnhEeWhp6PJ3L5VUg" name="RatingStatus">
+      <ownedAttribute xmi:id="_A0a0MEniEeWT5cjXtzfQuw" name="NONE">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_DheQUEniEeWT5cjXtzfQuw" name="POSITIVE">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_GNa5MEniEeWT5cjXtzfQuw" name="NEGATIVE">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0EEk4FL6EeWBBp_QVMjpMQ" name="MainUserRequest">
+      <ownedAttribute xmi:id="_3Mkm4FL6EeWBBp_QVMjpMQ" name="RequestingUser" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+      <ownedAttribute xmi:id="_9-Ev4FL6EeWBBp_QVMjpMQ" name="RequestedUsers" type="_b73MUEdVEeWkPtfE64Fcmg"/>
+      <ownedAttribute xmi:id="_Bg8ZsFL7EeWBBp_QVMjpMQ" name="DateCreated">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#DateTime"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_SMRukFL7EeWBBp_QVMjpMQ" name="requestingUser" memberEnd="_SMSVoFL7EeWBBp_QVMjpMQ _SMmesFL7EeWBBp_QVMjpMQ" navigableOwnedEnd="_SMmesFL7EeWBBp_QVMjpMQ">
+      <ownedEnd xmi:id="_SMSVoFL7EeWBBp_QVMjpMQ" name="users" type="_xssRgDeVEeWgLLgVPc11VQ" aggregation="shared" association="_SMRukFL7EeWBBp_QVMjpMQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SMl3oFL7EeWBBp_QVMjpMQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SMl3oVL7EeWBBp_QVMjpMQ" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_SMmesFL7EeWBBp_QVMjpMQ" name="mainUserRequests" type="_0EEk4FL6EeWBBp_QVMjpMQ" association="_SMRukFL7EeWBBp_QVMjpMQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SM5ZoFL7EeWBBp_QVMjpMQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SM5ZoVL7EeWBBp_QVMjpMQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_o9v3EFMCEeW61Y5ljw4pSw" name="requestedUsers" memberEnd="_o9zhcFMCEeW61Y5ljw4pSw _o-QNYFMCEeW61Y5ljw4pSw" navigableOwnedEnd="_o-QNYFMCEeW61Y5ljw4pSw">
+      <ownedEnd xmi:id="_o9zhcFMCEeW61Y5ljw4pSw" name="users" type="_xssRgDeVEeWgLLgVPc11VQ" aggregation="shared" association="_o9v3EFMCEeW61Y5ljw4pSw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o-PmUFMCEeW61Y5ljw4pSw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o-PmUVMCEeW61Y5ljw4pSw" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_o-QNYFMCEeW61Y5ljw4pSw" name="mainUserRequests" type="_0EEk4FL6EeWBBp_QVMjpMQ" association="_o9v3EFMCEeW61Y5ljw4pSw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o-rEIFMCEeW61Y5ljw4pSw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o-rEIVMCEeW61Y5ljw4pSw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IioaIFMDEeW61Y5ljw4pSw" name="MainUserRequest[]"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XzNrcFMHEeW61Y5ljw4pSw" name="CompanyEditRemarks">
+      <ownedAttribute xmi:id="_codjIFMHEeW61Y5ljw4pSw" name="user" type="_xssRgDeVEeWgLLgVPc11VQ"/>
+      <ownedAttribute xmi:id="_folsQFMHEeW61Y5ljw4pSw" name="whatWasEdited">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lkPLUFMHEeW61Y5ljw4pSw" name="editDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#DateTime"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_uyse8FMHEeW61Y5ljw4pSw" name="editRemarks">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5LUfoFMHEeW61Y5ljw4pSw" name="companysToCompanyEditRemarkss" memberEnd="_5LVGsFMHEeW61Y5ljw4pSw _5LWU0VMHEeW61Y5ljw4pSw" navigableOwnedEnd="_5LWU0VMHEeW61Y5ljw4pSw">
+      <ownedEnd xmi:id="_5LVGsFMHEeW61Y5ljw4pSw" name="companys" type="_K6necEQLEeWX6vo14GQrVw" aggregation="shared" association="_5LUfoFMHEeW61Y5ljw4pSw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5LVtwFMHEeW61Y5ljw4pSw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5LWU0FMHEeW61Y5ljw4pSw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_5LWU0VMHEeW61Y5ljw4pSw" name="companyEditRemarkss" type="_XzNrcFMHEeW61Y5ljw4pSw" association="_5LUfoFMHEeW61Y5ljw4pSw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5LW74FMHEeW61Y5ljw4pSw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5LW74VMHEeW61Y5ljw4pSw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_PnwbAFMJEeW61Y5ljw4pSw" name="Industry[]"/>
   </packagedElement>
 </uml:Model>
